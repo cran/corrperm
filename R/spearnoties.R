@@ -1,4 +1,4 @@
-`spearnoties` <-
+spearnoties <-
 function(x,y,alt=1){
 #asymptotic spearman test, assumes no ties 
 sel<-is.na(x-y)==FALSE #elim NAs

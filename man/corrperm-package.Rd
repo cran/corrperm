@@ -13,7 +13,7 @@ when there are repeated measurements
 \tabular{ll}{
 Package: \tab corrperm\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 2.0\cr
 Date: \tab 2008-02-26\cr
 License: \tab GPL-3\cr
 }
@@ -34,21 +34,20 @@ The tests are based on the combining the Spearman correlations or p-values
 for all possible combinations of x and y experiments.
 
 The inverse-variance weighted average Spearman correlation is:  
-\eqn{S = \sum (n_{jk} - 1) r_{jk} / (m \sum (n_{jk} - 1))}{%
+\eqn{S = \sum_{j,k} (n_{jk} - 1) r_{jk} / (m \sum_{j,k}  (n_{jk} - 1))}{%
 S = sum (njk - 1) rjk/(m sum (njk - 1))},
- where \eqn{m}{m} is the total number of 
-combinations of x and y experiments,  \eqn{n_{jk}}{njk} is the number of
+ where \eqn{n_{jk}}{njk} is the number of
 x,y pairs and \eqn{r_{jk}}{rjk} is the correlation for the \eqn{j^{th}}{jth} x 
 and the \eqn{k^{th}}{kth} y experiment, and
 the summation is over all possible pairs. 
 
 The unweighted Fisher's combining function is:
-\eqn{F = -2 \sum \ln(p_{jk})}{F = -2 sum ln(pjk)}
+\eqn{F = -2 \sum_{j,k} \ln(p_{jk})}{F = -2 sum ln(pjk)}
 , where \eqn{p_{jk}}{pjk} is the p-value of the Spearman test 
 for the \eqn{j^{th}}{jth} x and the \eqn{k^{th}}{kth} y experiment. 
 
 The weighted Fisher's combining function is:
-\eqn{Fw = -2 \sum (n_{jk} - 1) \ln(p_{jk}) / \sum (n_{jk} - 1)}{%
+\eqn{Fw = -2 \sum_{j,k} (n_{jk} - 1) \ln(p_{jk}) / \sum_{j,k} (n_{jk} - 1)}{%
 Fw = -2 sum (njk - 1)log(pjk)/sum (njk - 1)}.
 
 Each experiment must sample the same populations,
@@ -57,7 +56,7 @@ values are allowed.
 }
 \author{Douglas M. Potter
 
-Maintainer:  Douglas M Potter <potter@upci.pitt.edu>
+Maintainer:  Douglas M Potter <dmp71@pitt.edu>
 }
 \references{
 Potter, D.M. and Acilan C., Permutation Tests of Correlation for Data with Repeated Measurements,
